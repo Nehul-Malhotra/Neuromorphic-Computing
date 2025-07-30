@@ -1,0 +1,126 @@
+.articles-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.articles-container::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+
+.articles-container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.articles-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+.articles-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: calc(100vh - 10vh);
+    width: 100vw;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 3rem 0 8rem 0;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--primary);
+
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(10vh + 2rem);
+}
+
+.articles-divs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+.article-div{
+    background-color: var(--blur);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: #323235 1px solid;
+    border-radius: 10px;
+    padding: 2rem;
+    color: var(--secondary);
+    font-family: Poppins, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 60vw;
+    min-width: 40vw;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+
+    transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.article-div:target {
+    animation: highlightFlash 2s ease-out;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.3);
+}
+
+.article-div::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(../../assets/noise-light.png);
+    opacity: 0.2;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: inherit;
+}
+
+.article-div:hover {
+    background-color: var(--blurHover);
+}
+
+.article-div:last-child {
+    margin-bottom: 5rem;
+}
+
+.article-title{
+    font-size: 7vh;
+    text-align: center;
+    letter-spacing: 0.5vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "JetBrains Mono ExtraBold", sans-serif;
+    margin: 2vh 0 ;
+}
+
+@keyframes highlightFlash {
+    0% {
+        background-color: var(--blurHover);
+        transform: scale(1.02);
+    }
+    50% {
+        background-color: var(--blurHover);
+        transform: scale(1.01);
+    }
+    100% {
+        background-color: var(--blur);
+        transform: scale(1);
+    }
+}
