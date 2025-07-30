@@ -28,7 +28,7 @@ articlesContent = [
     "The field experienced significant acceleration and increased commercial interest beginning in the 2010s as the limitations of traditional computing architectures became increasingly apparent. The slowing of Moore's Law, growing concerns about power consumption in data centers, and the increasing demand for intelligent edge devices created conditions favoring neuromorphic approaches. Major technology corporations including Intel (Loihi chip), IBM (TrueNorth processor), and numerous startups began substantial investments in neuromorphic research around 2014, while government agencies like DARPA launched significant funding programs to accelerate development and transition the technology from research to practical applications. ",
 
     "<video controls width='500px'>" +
-    "<source src='Neuromorphic-Computing/assets/Reel.mp4' type='video/mp4'>" +
+    "<source src='assets/Reel.mp4' type='video/mp4'>" +
     "</video>"
 ]
 
