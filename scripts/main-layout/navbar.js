@@ -256,7 +256,7 @@ function setupUnderline(className, color = "currentColor", thickness = "3px") {
             left: '0',
             height: thickness,
             width: '0%',
-            backgroundColor: color,
+            backgroundColor: `var(--accent)`,
             transition: 'width 0.3s ease',
         });
         container.appendChild(underline);
