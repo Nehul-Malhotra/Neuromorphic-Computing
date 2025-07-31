@@ -338,7 +338,7 @@ function renderNavbar(){
     const onNavLeave = () => staggerLeave("navbar-title");
 
 
-    setupUnderline("nav-article", colorScheme.secondary, "3px");
+    setupUnderline("nav-article", colorScheme.accent.rgb, "3px");
 
     navArea.addEventListener("mouseover", () => {
         arrow.style.opacity = "1";
