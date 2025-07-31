@@ -71,6 +71,11 @@
     transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
 }
 
+.article-div::selection {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
 .article-div:target {
     animation: highlightFlash 2s ease-out;
     box-shadow: 0 0 20px rgba(var(--accent), 0.3);
@@ -108,6 +113,11 @@
     text-transform: uppercase;
     font-family: "JetBrains Mono ExtraBold", sans-serif;
     margin: 2vh 0 ;
+}
+
+.article-title::selection {
+    background-color: var(--accent);
+    color: var(--primary);
 }
 
 @keyframes highlightFlash {
