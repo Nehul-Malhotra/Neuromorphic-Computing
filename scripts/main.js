@@ -94,6 +94,16 @@ function updateTheme() {
     if (themeName){
         themeName.innerText = `${theme}`
     }
+    
+    if (theme === "Seaglass Mint"){
+        changeIcon("../assets/icons/green.svg");
+    } else if (theme === "Spiced Tangerine"){
+        changeIcon("../assets/icons/orange.svg");
+    } else if (theme === "Crystal Current"){
+        changeIcon("../assets/icons/blue.svg");
+    } else {
+        changeIcon("../assets/icons/yellow.svg");
+    }
 }
 
 function loadLandingPageInfo(){
@@ -101,10 +111,10 @@ function loadLandingPageInfo(){
     renderContent()
     renderTitleBar()
 
-    // Add scroll functionality after content is rendered
+
     setTimeout(() => {
-        addNavScrollHandlers(); // This will be in navbar.js
-        handleHashNavigation(); // This handles initial hash in URL
+        addNavScrollHandlers();
+        handleHashNavigation();
     }, 100);
 
     document.body.addEventListener("dblclick", () => {
@@ -144,3 +154,20 @@ function handleHashNavigation() {
 }
 
 window.addEventListener('hashchange', handleHashNavigation);
+
+function changeIcon(iconPath) {
+    // Remove existing favicon
+    const existingIcon = document.querySelector("link[rel*='icon']");
+    if (existingIcon) {
+        existingIcon.remove();
+    }
+
+    // Create new favicon link
+    const newIcon = document.createElement('link');
+    newIcon.rel = 'icon';
+    newIcon.type = 'image/svg+xml';
+    newIcon.href = iconPath;
+
+    // Add to head
+    document.head.appendChild(newIcon);
+}
