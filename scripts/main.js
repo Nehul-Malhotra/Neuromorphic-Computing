@@ -96,13 +96,13 @@ function updateTheme() {
     }
     
     if (theme === "Seaglass Mint"){
-        changeIcon("../assets/icons/green.svg");
+        changeIcon("assets/icons/green.svg");
     } else if (theme === "Spiced Tangerine"){
-        changeIcon("../assets/icons/orange.svg");
+        changeIcon("assets/icons/orange.svg");
     } else if (theme === "Crystal Current"){
-        changeIcon("../assets/icons/blue.svg");
+        changeIcon("assets/icons/blue.svg");
     } else {
-        changeIcon("../assets/icons/yellow.svg");
+        changeIcon("assets/icons/yellow.svg");
     }
 }
 
